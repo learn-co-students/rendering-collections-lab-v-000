@@ -24,14 +24,14 @@ RSpec.describe "invoices_index_view" do
   end
 
   it "renders the invoice partial" do
-    orders = Order.first
+    orders = [Order.first]
     assign(:orders, orders)
     render :template => "orders/index.html.erb"
     expect(rendered).to render_template(:partial => "orders/_order")
   end
 
   it "renders the invoice partial using the abstract method of rendering collection" do
-    orders = Order.first
+    orders = [Order.first]
     assign(:orders, orders)
     expect_any_instance_of(Order).to receive(:to_partial_path).and_call_original
     render :template => "orders/index.html.erb"
