@@ -1,0 +1,11 @@
+<h1>Invoices</h1>
+<table>
+  <tr>
+    <th>Invoice Id
+    <th>Customer</th>  
+  </tr>
+    <tr>
+      <th><%= invoice.id %></th>
+      <th><%= render partial: 'orders/order', collection: invoice.orders%></th>
+    </tr>
+</table>
