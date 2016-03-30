@@ -1,0 +1,10 @@
+
+<p><strong>Customer:</strong> <%= order.customer.name %><p>
+  <ol>
+  <% order.products.each do |p| %>
+    <li>
+      <%= p.name %>, <%= p.price %>
+    </li>
+  <% end %>
+
+  </ol>
