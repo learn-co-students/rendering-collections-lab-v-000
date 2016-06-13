@@ -6,6 +6,6 @@
     <th>Price
     <th>Customer</th>  
   </tr>
-  <%= render(partial: "order", collection: @orders) || "No Orders" %>
+  <%= render(@orders) || "No Orders" %>
 </table>
 
