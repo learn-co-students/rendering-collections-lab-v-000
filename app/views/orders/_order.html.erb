@@ -1,0 +1,5 @@
+<tr>
+  <td><%= order.id %></td>
+  <%=render(order.products) || "No Products" %>
+  <td><%= order.customer.name %></td>
+</tr>
