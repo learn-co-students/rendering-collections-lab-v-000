@@ -1,8 +1,10 @@
 <h1>Invoices</h1>
+
 <table>
   <tr>
-    <th>Invoice Id
+    <th>Invoice ID</th>
     <th>Customer</th>  
   </tr>
-  <%= render :partial => "invoice", :collection => @invoices %>
+  
+  <%= render(@invoices) || 'No Invoices' %>
 </table>
