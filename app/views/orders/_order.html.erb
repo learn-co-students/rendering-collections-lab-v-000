@@ -1,0 +1,8 @@
+  <% @orders.products.each do |product| %>
+    <tr>
+      <td><%= @orders.id %></td>
+      <td><%= product.name %></td>
+      <td><%= product.price %></td>
+      <td><%= @orders.customer.name %></td>
+    </tr>
+  <% end %>
