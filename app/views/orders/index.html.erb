@@ -1,19 +1,14 @@
-<h2>Open Orders</h2>
-<table>
-  <tr>
-    <th>Order Id</th>
-    <th>Product
-    <th>Price
-    <th>Customer</th>  
-  </tr>
-  <% @orders.each do |order| %>
-    <% order.products.each do |product| %>
+<% if !@orders.blank?%>
+    <h2>Open Orders</h2>
+    <table>
       <tr>
-        <td><%= order.id %></td>
-        <td><%= product.name %></td>
-        <td><%= product.price %></td>
-        <td><%= order.customer.name %></td>
+        <th>Order Id</th>
+        <th>Product
+        <th>Price
+        <th>Customer</th>
       </tr>
-    <% end %>
-  <% end %>
-</table>
+      <%=render @orders%>
+    </table>
+    <%else%>
+    <h1>No Orders</h1>
+    <%end%>
