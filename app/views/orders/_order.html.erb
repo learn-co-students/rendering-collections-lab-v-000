@@ -1,13 +1,5 @@
 
 
-<table>
-  <tr>
-    <th>Order Id</th>
-    <th>Product
-    <th>Price
-    <th>Customer</th>
-  </tr>
-
     <% order.products.each do |product| %>
       <tr>
         <td><%= order.id %></td>
@@ -16,5 +8,3 @@
         <td><%= order.customer.name %></td>
       </tr>
     <% end %>
-
-</table>
