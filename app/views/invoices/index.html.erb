@@ -5,8 +5,5 @@
     <th>Customer</th>
   </tr>
 
-  <%= @invoices.each do |invoice| %>
-    <%= render partial: "invoice", collection: @invoices %>
-  <% end %>
-
+  <%= render(@invoices) || "No Invoices" %>
 </table>
