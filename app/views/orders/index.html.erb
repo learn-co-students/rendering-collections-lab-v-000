@@ -6,6 +6,7 @@
     <th>Price
     <th>Customer</th>  
   </tr>
+
   <% @orders.each do |order| %>
     <% order.products.each do |product| %>
       <tr>
@@ -16,4 +17,5 @@
       </tr>
     <% end %>
   <% end %>
+  
 </table>
