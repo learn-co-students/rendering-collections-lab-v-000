@@ -1,0 +1,5 @@
+<tr>
+  <td><%= order.id %></td>
+  <%= render(partial: 'products/product', collection: order.products) %>
+  <td><%= order.customer.name %></td>
+</tr>
