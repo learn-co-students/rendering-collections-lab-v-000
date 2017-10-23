@@ -7,6 +7,6 @@
     <th>Customer</th>
   </tr>
 
-  <%= render :partial => "order", :collection => @orders || "There are no orders!"  %>
+  <%= render(@orders) || "No Orders"  %>
 
 </table>
