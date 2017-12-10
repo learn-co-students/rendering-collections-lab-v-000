@@ -1,0 +1,12 @@
+<% @invoices = Invoice.all %>
+<h1>Invoices</h1>
+<table>
+  <th>Invoice Id</th>
+  <th>Customer</th>
+  <%@invoices.each do |invoice| %>
+  <tr>
+    <th><%= invoice.id %></th>
+    <th><%= invoice.orders.first ? invoice.orders.first.customer.name : "No Orders" %></th>
+  </tr>
+  <%end%>
+</table>
