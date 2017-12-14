@@ -5,9 +5,6 @@
     <th>Customer</th>  
   </tr>
 
-  <% if @invoices != []%>
-    <%= render(@invoices)%>
-  <% else %>
-    No Invoices
-  <% end %>
+    <%= render(@invoices) || "No Invoices"%>
+
 </table>
