@@ -1,0 +1,6 @@
+
+
+  <tr>
+    <th><%= @invoices.id %></th>
+    <th><%= @invoices.orders.first ? invoice.orders.first.customer.name : "No Orders" %></th>
+  </tr>
