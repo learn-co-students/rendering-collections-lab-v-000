@@ -1,8 +1,8 @@
 class CreateOrderedproducts < ActiveRecord::Migration
   def change
     create_table :ordered_products do |t|
-      t.integer :product_id
-      t.integer :order_id
+      t.belongs_to :product
+      t.belongs_to :order
 
       t.timestamps null: false
     end
