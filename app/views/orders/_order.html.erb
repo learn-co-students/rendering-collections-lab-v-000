@@ -1,0 +1,9 @@
+
+<% order.products.each do |product| %>
+  <ol>
+    <li><%= order.id %></li>
+    <li><%= product.name %></li>
+    <li><%= product.price %></li>
+    <li><%= order.customer.name %></li>
+  </ol>
+<% end %>
