@@ -4,4 +4,8 @@ class InvoicesController < ApplicationController
     @invoices = Invoice.all
   end
 
+  def new
+    @invoice = Invoice.create
+  end
+
 end
