@@ -1,3 +1,7 @@
+<% if @orders.class == Array && @orders.empty? %>
+  <h2>No Orders</h2>
+<% end %>
+
 <h2>Open Orders</h2>
 <table>
   <tr>
@@ -6,6 +10,5 @@
     <th>Price
     <th>Customer</th>
   </tr>
-  <%= render :partial => "order", :collection => @orders %>
-
+<%= render @orders %>
 </table>

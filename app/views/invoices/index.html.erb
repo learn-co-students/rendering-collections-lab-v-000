@@ -1,8 +1,13 @@
+<% if @invoices.class == Array && @invoices.empty? %>
+  <%= render 'invoices/no_invoice' %>
+<% end %>
+
 <h1>Invoices</h1>
 <table>
   <tr>
     <th>Invoice Id
     <th>Customer</th>
   </tr>
-  <%= render :partial => 'invoice', :collection => @invoices %>
+<tr>
+<%= render @invoices %>
 </table>
