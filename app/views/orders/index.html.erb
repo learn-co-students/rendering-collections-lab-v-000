@@ -6,17 +6,6 @@
     <th>Price
     <th>Customer</th>
   </tr>
-    <%= render(@orders) %>
+    <%= render(@orders) || "No Orders"%>
   <!--% @orders.each do |order| %-->
-
-    <%= render(order_url.products) %>
-    <!--% order.products.each do |product| %-->
-      <tr>
-        <td><%= order.id %></td>
-        <td><%= product.name %></td>
-        <td><%= product.price %></td>
-        <td><%= order.customer.name %></td>
-      </tr>
-    <!--% end %-->
-  <!--% end %-->
 </table>
