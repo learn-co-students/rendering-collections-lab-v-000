@@ -1,0 +1,7 @@
+<% order.products.each do |product| %>
+
+    <h3>Order #<td><%= order.id %>: </h3>
+    <p>Product: <%= product.name %></td>
+    <p>Price: <%= product.price %></td>
+    <p>Customer Name: <%= order.customer.name %></td>
+<% end %>
