@@ -1,6 +1,6 @@
 class InvoicesController < ApplicationController
 
-  def index
+  def index  
     @invoices = Invoice.all
   end
 
