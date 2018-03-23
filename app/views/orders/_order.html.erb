@@ -1,10 +1,6 @@
-<% @orders.each do |order| %>
-  <% order.products.each do |product| %>
-    <tr>
-      <td><%= order.id %></td>
-      <td><%= product.name %></td>
-      <td><%= product.price %></td>
-      <td><%= order.customer.name %></td>
-    </tr>
-  <% end %>
-<% end %>
+<tr>
+  <td><%= order.id %></td>
+  <td><%= order.products[0].name %></td>
+  <td><%= order.products[0].price %></td>
+  <td><%= order.customer.name %></td>
+</tr>
