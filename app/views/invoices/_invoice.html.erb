@@ -1,0 +1,9 @@
+<table>
+  <tr>
+       <% Invoice.all.each do |invoice| %>
+    <tr>
+      <th><%= invoice.id %></th>
+      <th><%= invoice.orders.first ? invoice.orders.first.customer.name : "No Orders" %></th>
+  </tr>
+  </table>
+  <% end %>
