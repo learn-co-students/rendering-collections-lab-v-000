@@ -1,0 +1,20 @@
+
+<table>
+    <tr>
+    <th>Invoice Id</th>
+    <th>Customer</th>
+  </tr>
+  <%if @invoices[0] != nil %>
+  <% @invoices.each do |invoice| %>
+    <tr>
+      <th><%= invoice.id %></th>
+      <th><%= invoice.orders.first ? invoice.orders.first.customer.name : "No Orders" %></th>
+    </tr>
+  <% end %>
+  <%else%>
+  <tr>
+    <th><%= @invoices.id %></th>
+    <th><%= @invoices.orders.first ? @invoices.orders.first.customer.name : "No Orders" %></th>
+  </tr>
+ <%end%>
+</table>
