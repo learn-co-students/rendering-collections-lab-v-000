@@ -1,13 +1,13 @@
+<<<<<<< HEAD
 <h1>Invoices</h1>
 <table>
   <tr>
     <th>Invoice Id
     <th>Customer</th>  
   </tr>
-  <% @invoices.each do |invoice| %>
-    <tr>
-      <th><%= invoice.id %></th>
-      <th><%= invoice.orders.first ? invoice.orders.first.customer.name : "No Orders" %></th>
-    </tr>
-  <% end %>
+
+<%= render(@invoices) || "No Invoices" %>
+
 </table>
+=======
+>>>>>>> 11718ce1d0078d498b2db945ad19233c7c2924a7
