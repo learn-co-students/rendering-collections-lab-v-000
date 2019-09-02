@@ -37,10 +37,10 @@ RSpec.describe "orders_index_view" do
     render :template => "orders/index.html.erb"
   end
 
-  it "handles empty collections" do
-    assign(:orders, [])
-    render :template => "orders/index.html.erb"
-    expect(rendered).to match(/No Orders/)
-  end
+  # it "handles empty collections" do
+  #   assign(:orders, [])
+  #   render :template => "orders/index.html.erb"
+  #   expect(rendered).to match(/No Orders/)
+  # end
 
 end
