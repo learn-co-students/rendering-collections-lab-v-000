@@ -1,0 +1,16 @@
+<h2>Open Orders</h2>
+<table>
+  <tr>
+    <th>Order Id</th>
+    <th>Product
+    <th>Price
+    <th>Customer</th>  
+  </tr>
+  <tr>
+    <td><%= order.id %></td>
+    <td><%= order.products.first.name %></td>
+    <td><%= order.products.first.price %></td>
+    <td><%= order.customer.name %></td>
+</tr>
+  
+</table>
