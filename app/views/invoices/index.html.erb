@@ -1,13 +1,45 @@
+
 <h1>Invoices</h1>
 <table>
   <tr>
     <th>Invoice Id
-    <th>Customer</th>  
+    <th>Customer</th>
+  </tr>
+
+<%= render(@invoices) || "No Invoices" %>
+
+</table>
+
+
+<%#could also be done as%>
+<%#=  render :partial => "invoice", :collection => @invoices || "There are no Blog Posts"%>
+
+<%# @invoices.each do |invoice| %>
+  <%#= render :partial => "invoice", {:locals => {:invoice => invoice}} %>
+<%# end %>
+
+
+
+
+<%#  ORIGINAL VIEW FILE  with commented out hashes
+
+<h1>Invoices</h1>
+<table>
+  <tr>
+    <th>Invoice Id
+    <th>Customer</th>
   </tr>
   <% @invoices.each do |invoice| %>
+
+<%#
     <tr>
-      <th><%= invoice.id %></th>
-      <th><%= invoice.orders.first ? invoice.orders.first.customer.name : "No Orders" %></th>
+      <th><%= invoice.id %>  <%# </th>
+<%#
+      <th><%= invoice.orders.first ? invoice.orders.first.customer.name : "No Orders" %>
+<%#
+                    </th>
     </tr>
   <% end %>
-</table>
+<%#
+  </table>
+%>
